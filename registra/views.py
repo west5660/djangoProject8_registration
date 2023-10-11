@@ -49,7 +49,7 @@ def registr(req):
             man.last_name = k4
             man.save()
             login(req,user)                              #входит на сайт новым пользователем
-                                
+
             return redirect('home')
     else:
         anketa = SignUpform()
