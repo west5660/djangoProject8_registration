@@ -1,0 +1,64 @@
+/* CSS-стили для шапки */
+.header {
+    background-color: #333;
+    color: #0e86e7;
+    padding: 10px;
+}
+
+/* Стили для меню */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #157358;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.logout-link {
+    text-decoration: none;
+    color: #f00;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Стили для контента */
+.content {
+    padding: 20px;
+}
+
+.greeting {
+    font-size: 24px;
+    color: #333;
+}
+.admin-link{
+      text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+.greeting{
+    text-decoration: none;
+    color: rgb(16, 15, 15);
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+body{
+    background-color: cornflowerblue;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>Кино</title>
+    <link rel="stylesheet" href="{% static 'css.css' %}">
+    {% endblock head %}
+</head>
+<body>
+    <div class="header">
+        {% block menu %}
+        <div class="menu">
+            <ul>
+                {% if not user.username %}
+                    <li><a class="login-link" href="{% url 'login' %}">Login</a></li>
+                {% else %}
+                    <li><a class="logout-link" href="{% url 'logout' %}">Logout</a></li>
+
+                {% endif %}
+            </ul>
+        </div>
+        {% endblock menu %}
+    </div>
+    <a href="{% url 'admin:index' %}" class="admin-link">Админка</a>
+    <div class="content">
+        {% block content %}
+        <h1 class="greeting">Привет, {{ username }}</h1>
+        {% endblock content %}
+    </div>
+</body>
+</html>
+
+
+{#<!DOCTYPE html>#}
+{#{% load static %}#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    {% block head %}#}
+{#    <title>кино</title>#}
+{#    <link rel="stylesheet" href="{% static 'css.css' %}">#}
+{#    {% endblock head %}#}
+{#</head>#}
+{#<body>#}
+{#    {% block menu %}#}
+{#    <div class="menu">#}
+{#        <a href="">Фильмы</a>#}
+{#        <a href="">Актеры</a>#}
+{#        <a href="">Режисеры</a>#}
+{#        <a href="">Подписка</a>#}
+{##}
+{#  <a href="">Подписка купить</a>#}
+{##}
+{##}
+{#        {% if not user.username %}#}
+{#            <a href="{% url 'login' %}">Login</a>#}
+{#        {% else %}#}
+{#            <a href="{% url 'logout' %}">Logout</a>#}
+{#        {% endif %}#}
+{##}
+{##}
+{#    </div>#}
+{#    {% endblock menu %}#}
+{#    {% block content %}#}
+{#    <h1>Привет {{ username }}</h1>#}
+{#    <h2>Каталог фильмов</h2>#}
+{#        <h2>На сайте {{ k1 }} фильмов</h2>#}
+{#        <h2>На сайте {{ k2 }} актеров</h2>#}
+{#        <h2>На сайте {{ k3 }} фильмов бесплатно</h2>#}
+{#    {% endblock content %}#}
+{##}
+{#<a href="{% url 'admin:index' %}">Админка</a>#}
+{##}
+{#</body>#}
+{#</html>#}

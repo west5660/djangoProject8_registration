@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css.css' %}">
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+{% endblock %}
+{% block content %}
+
+
+    <h2>РЕГИСТРАЦИЯ</h2>
+<form action="" method="post">
+{% csrf_token %}
+    <table>
+{% for one in regform %}
+    <div>{{ one.label_tag }}</div>
+    <div> {{ one }}</div>
+    <div> {{ one.errors }}</div>
+{% endfor %}
+{#    {{ regform }}#}
+        </table>
+<input type="submit" value="отправить">
+</form>
+{% endblock %}
+
+<h2>dfgdfg</h2>
